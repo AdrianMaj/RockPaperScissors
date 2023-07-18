@@ -1,0 +1,17 @@
+@media (min-width: 576px) {
+	$icon-size: 130px;
+	.game {
+		&__icon {
+			width: $icon-size;
+			height: $icon-size;
+            &::after{
+                width: $icon-size;
+                height: $icon-size;
+            }
+		}
+        &__house{
+            width: $icon-size;
+            height: $icon-size;
+        }
+	}
+}

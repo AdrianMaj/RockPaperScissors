@@ -1,0 +1,87 @@
+@use './variables' as *;
+@media (min-width: 768px) {
+	$icon-size: 220px;
+    $shadow-size: 10px;
+	.score {
+		margin: 2em;
+		padding: 1em;
+		border-width: 6px;
+        border-radius: 8px;
+		&__title {
+			font-size: 4rem;
+			line-height: 3.6rem;
+		}
+		&__box {
+			width: 150px;
+			border-radius: 6px;
+		}
+		&__text {
+			font-size: 2rem;
+		}
+		&__value {
+			font-size: 7rem;
+		}
+	}
+	.game {
+		&__icon {
+			margin: 1em 2em;
+			width: $icon-size;
+			height: $icon-size;
+			border-width: 24px;
+			box-shadow: inset 0px $shadow-size 0px rgba(155, 151, 151, 0.5);
+            &::after {
+				width: $icon-size;
+				height: $icon-size;
+			}
+		}
+        &__paper {
+            &::after {
+                box-shadow: 0px $shadow-size 0px $paper-shadow;
+            }
+        }
+        &__scissors {
+            &::after {
+                box-shadow: 0px $shadow-size 0px $scissors-shadow;
+            }
+        }
+        &__rock {
+            &::after {
+                box-shadow: 0px $shadow-size 0px $rock-shadow;
+            }
+        }
+        &__house{
+            box-shadow: none;
+        }
+		&__background {
+			svg {
+				scale: 1;
+			}
+		}
+		&__text {
+			font-size: 2.4rem;
+		}
+	}
+
+	.result {
+		&__text {
+			font-size: 9rem;
+		}
+		&__play-again-btn {
+			font-size: 2.8rem;
+		}
+	}
+	.rules-btn {
+		font-size: 2.5rem;
+	}
+	.rules-modal {
+		&__image {
+			scale: 1.5;
+		}
+		&__close-btn {
+			scale: 1.5;
+		}
+		&__title {
+			font-size: 6rem;
+		}
+	}
+}
