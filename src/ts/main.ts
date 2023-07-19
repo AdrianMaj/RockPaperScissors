@@ -52,7 +52,8 @@ const handleGame = (e: Event) => {
 					const textElement = text as HTMLElement
 					textElement.style.display = 'block'
 					gameHouse.style.display = 'flex'
-					gameSection.style.display = 'flex'
+					gameSection.style.gridTemplateColumns = 'repeat(4,1fr)'
+					gameSection.style.gridTemplateRows = '1fr 2fr'
 				}
 			})
 		}

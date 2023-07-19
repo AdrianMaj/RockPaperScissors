@@ -23,6 +23,7 @@
 		}
 	}
 	.game {
+		margin-top: auto;
 		margin-bottom: 4em;
 		&__icon {
 			width: $icon-size;
@@ -52,16 +53,25 @@
 				box-shadow: 0px $shadow-size 0px $rock-shadow;
 			}
 		}
+		&__house-position {
+			grid-area: 1/3/3/5 !important;
+			scale: 1.5;
+		}
+		.selected {
+			grid-area: 1/1/3/3;
+			scale: 1.5;
+		}
 	}
 
 	.result {
+		grid-area: 1/2/3/4;
 		&__text {
-			font-size: 8rem;
+			font-size: 6rem;
 		}
 		&__play-again-btn {
-			font-size: 3.7rem;
+			font-size: 2.5rem;
 			border-radius: 8px;
-			width: 40%;
+			width: 50%;
 		}
 	}
 	.rules-btn {
@@ -81,11 +91,12 @@
 		grid-template-columns: repeat(2, 1fr);
 		grid-template-rows: 0.25fr 1fr;
 		margin: 2em;
-		width: 35vw;
-		height: 35vw;
+		width: 40vw;
+		height: 40vw;
 		border-radius: 12px;
 		padding: 0 2em;
 		left: 50%;
+		margin: 0 auto;
 		transform: translateX(-50%);
 		&__image {
 			scale: 1.2;
