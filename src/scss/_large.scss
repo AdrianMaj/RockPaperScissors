@@ -62,12 +62,14 @@
 	}
 
 	.result {
+		padding-top: 3em;
 		&__text {
-			font-size: 12rem;
+			font-size: 8rem;
 		}
 		&__play-again-btn {
 			font-size: 3.7rem;
             border-radius: 8px;
+			width: 60%;
 		}
 	}
 	.rules-btn {

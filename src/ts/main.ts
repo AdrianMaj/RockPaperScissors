@@ -2,6 +2,7 @@
 const rulesBtn = document.querySelector('.rules-btn')
 const rulesModal = document.querySelector('.rules-modal')
 const closeModalBtn = document.querySelector('.rules-modal__close-btn')
+const rulesBackground: HTMLElement = document.querySelector('.rules-background')!
 
 //GAME
 const gameSection: HTMLElement = document.querySelector('.game')!
@@ -28,9 +29,11 @@ if (Number(sessionStorage.getItem('score')) > 0) {
 // RULES
 const showModal = () => {
 	rulesModal?.classList.add('active')
+	rulesBackground.classList.add('background-visible')
 }
 const closeModal = () => {
 	rulesModal?.classList.remove('active')
+	rulesBackground.classList.remove('background-visible')
 }
 //GAME
 const handleGame = (e: Event) => {

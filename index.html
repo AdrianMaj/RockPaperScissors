@@ -14,37 +14,40 @@
 </head>
 
 <body>
-  <section class="score">
-    <h1 class="score__title">Rock<br />Paper<br />Scissors</h1>
-    <div class="score__box">
-      <p class="score__text">score</p>
-      <p class="score__value">0</p>
-    </div>
-  </section>
-  <section class="game">
-    <div class="game__paper game__icon" data-id="0">
-      <p class="game__text">you picked</p>
-    </div>
-    <div class="game__scissors game__icon" data-id="1">
-      <p class="game__text">you picked</p>
-    </div>
+  <div class="fixed-content">
+    <section class="score">
+      <h1 class="score__title">Rock<br />Paper<br />Scissors</h1>
+      <div class="score__box">
+        <p class="score__text">score</p>
+        <p class="score__value">0</p>
+      </div>
+    </section>
+    <section class="game">
+      <div class="game__paper game__icon" data-id="0">
+        <p class="game__text">you picked</p>
+      </div>
+      <div class="game__scissors game__icon" data-id="1">
+        <p class="game__text">you picked</p>
+      </div>
       <div class="game__rock game__icon" data-id="2">
         <p class="game__text">you picked</p>
       </div>
-    <div class="game__icon game__house">
-      <p class="game__house--text game__text">the house picked</p>
+      <div class="game__icon game__house">
+        <p class="game__house--text game__text">the house picked</p>
+      </div>
+      <div class="game__background"><svg width="313" height="278" xmlns="http://www.w3.org/2000/svg">
+          <path stroke="#000" stroke-width="15" fill="none" opacity=".2" d="M156.5 262 300 8H13z" />
+        </svg></div>
+    </section>
+    <div class="result">
+      <div class="result__text"></div>
+      <button class="result__play-again-btn">play again</button>
     </div>
-    <div class="game__background"><svg width="313" height="278" xmlns="http://www.w3.org/2000/svg">
-        <path stroke="#000" stroke-width="15" fill="none" opacity=".2" d="M156.5 262 300 8H13z" />
-      </svg></div>
-  </section>
-  <div class="result">
-    <div class="result__text"></div>
-    <button class="result__play-again-btn">play again</button>
+    <div class="btn-container">
+      <button class="rules-btn">rules</button>
+    </div>
   </div>
-  <div class="btn-container">
-    <button class="rules-btn">rules</button>
-  </div>
+  <div class="rules-background"></div>
   <div class="rules-modal">
     <p class="rules-modal__title">rules</p>
     <div class="rules-modal__image">

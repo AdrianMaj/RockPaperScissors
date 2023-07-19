@@ -9,17 +9,25 @@ html {
 	font-size: 10px;
 }
 body {
-	position: fixed;
-	display: flex;
-	flex-direction: column;
 	width: 100vw;
 	height: 100vh;
 	font-family: 'Barlow Semi Condensed', sans-serif;
 	background-image: linear-gradient(180deg, hsl(214, 47%, 23%) 0%, hsl(237, 49%, 15%) 100%);
 	background-attachment: fixed;
 	font-size: 1.6rem;
+	position: fixed;
 }
-
+.fixed-content {
+	display: flex;
+	flex-direction: column;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
 .score {
 	display: flex;
 	justify-content: flex-start;
@@ -198,6 +206,7 @@ body {
 	}
 }
 .btn-container {
+	margin-top: auto;
 	padding: 2em;
 	display: flex;
 	justify-content: center;
@@ -221,6 +230,9 @@ body {
 		color: $rules-color;
 	}
 }
+.rules-background {
+	display: none;
+}
 .rules-modal {
 	position: absolute;
 	display: flex;
@@ -237,7 +249,7 @@ body {
 		font-weight: 700;
 		text-transform: uppercase;
 		font-size: 3rem;
-		padding: 2em;
+		padding: 3%;
 	}
 	&__image {
 		margin: auto;
