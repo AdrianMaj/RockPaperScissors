@@ -82,6 +82,9 @@ const handleGame = (e: Event) => {
 			const circle = document.createElement('div')
 			circle.classList.add('circle-effect')
 			gameHouse.appendChild(circle)
+			setTimeout(() => {
+				gameHouse.removeChild(circle)
+			}, 2000)
 		} else if (
 			(houseNumber == 0 && playerNumber == 1) ||
 			(houseNumber == 1 && playerNumber == 2) ||
@@ -95,6 +98,9 @@ const handleGame = (e: Event) => {
 			const circle = document.createElement('div')
 			circle.classList.add('circle-effect')
 			selectedIcon.appendChild(circle)
+			setTimeout(() => {
+				selectedIcon.removeChild(circle)
+			}, 2000)
 		}
 		// 0 - paper
 		// 1 - scissors
