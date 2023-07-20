@@ -1,89 +1,93 @@
 @use './variables' as *;
 @media (min-width: 992px) {
-	$icon-size: 25vh;
-	$shadow-size: 1vh;
-	.score {
-		margin: 2em;
-		padding: 1em;
-		border-width: 8px;
-		&__title {
-			font-size: 5rem;
-			line-height: 4.2rem;
+		$icon-size: 15em;
+		$border-width: 24px;
+		$shadow-width: 12px;
+		.score {
+			&__title {
+				font-size: 5rem;
+				line-height: 4.2rem;
+			}
+			&__box {
+				padding: 1.2em 2.8em;
+			}
+			&__text {
+				font-size: 2rem;
+			}
+			&__value {
+				font-size: 8rem;
+				line-height: 7rem;
+			}
 		}
-		&__box {
-			width: 150px;
-			border-radius: 6px;
-		}
-		&__text {
-			font-size: 2.5rem;
-		}
-		&__value {
-			font-size: 8rem;
-		}
-	}
-	.game {
-		&__icon {
-			margin: 1em 2em;
-			width: $icon-size;
-			height: $icon-size;
-			border-width: 3vh;
-			box-shadow: inset 0px $shadow-size 0px rgba(155, 151, 151, 0.5);
-			&::after {
+		.game {
+			&__icon {
 				width: $icon-size;
 				height: $icon-size;
+				box-shadow: inset 0px $shadow-width 0px rgba(155, 151, 151, 0.5);
+				border-width: $border-width;
+				img {
+					width: 80px;
+					height: 80px;
+				}
+				&::after {
+					border-width: $border-width;
+				}
+			}
+			&__paper {
+				&::after {
+					box-shadow: 0px $shadow-width 0px $paper-shadow;
+				}
+			}
+			&__scissors {
+				&::after {
+					box-shadow: 0px $shadow-width 0px $scissors-shadow;
+				}
+			}
+			&__rock {
+				&::after {
+					box-shadow: 0px $shadow-width 0px $rock-shadow;
+				}
+			}
+			&__house {
+				box-shadow: none;
+			}
+			&__text {
+				font-size: 2.6rem;
+			}
+			&__background {
+				img {
+					scale: 1.4;
+				}
 			}
 		}
-		&__paper {
-			&::after {
-				box-shadow: 0px $shadow-size 0px $paper-shadow;
+		.result {
+			&__text {
+				font-size: 8rem;
+			}
+			&__play-again-btn {
+				border-radius: 10px;
+				font-size: 3rem;
 			}
 		}
-		&__scissors {
-			&::after {
-				box-shadow: 0px $shadow-size 0px $scissors-shadow;
+	
+		.rules-btn {
+			font-size: 3rem;
+			border-radius: 10px;
+		}
+		.rules-modal {
+			&__title {
+				font-size: 6rem;
+			}
+			&__image {
+				scale: 2.2;
+			}
+			&__close-btn {
+				scale: 2.2;
 			}
 		}
-		&__rock {
-			&::after {
-				box-shadow: 0px $shadow-size 0px $rock-shadow;
-			}
-		}
-		&__house {
-			box-shadow: none;
-		}
-		&__background {
-			svg {
-				scale: 1.33;
-			}
-		}
-		&__text {
-			font-size: 3.2rem;
-		}
+	
+	.circle-effect {
+		width: 30em;
+		height: 30em;
 	}
-
-	.result {
-		// padding-top: 3em;
-		&__text {
-			font-size: 8rem;
-		}
-		&__play-again-btn {
-			font-size: 3.7rem;
-            border-radius: 8px;
-			width: 60%;
-		}
 	}
-	.rules-btn {
-		font-size: 3.1rem;
-	}
-	.rules-modal {
-		&__image {
-			scale: 2;
-		}
-		&__close-btn {
-			scale: 2;
-		}
-		&__title {
-			font-size: 9rem;
-		}
-	}
-}

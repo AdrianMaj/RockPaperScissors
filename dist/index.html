@@ -10,9 +10,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;600;700&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
   
-  <script type="module" crossorigin src="/RockPaperScissors/dist/assets/index-75cc44b3.js"></script>
-  <link rel="stylesheet" href="/RockPaperScissors/dist/assets/index-5e6160cc.css">
+  <script type="module" crossorigin src="/RockPaperScissors/dist/assets/index-8cbd1574.js"></script>
+  <link rel="stylesheet" href="/assets/index-dfd9a59c.css">
 </head>
 
 <body>
@@ -26,20 +27,24 @@
     </section>
     <section class="game">
       <div class="game__paper game__icon" data-id="0">
+        <img src="/assets/icon-paper-90d57903.svg" alt="Paper icon">
         <p class="game__text">you picked</p>
       </div>
       <div class="game__scissors game__icon" data-id="1">
+        <img src="/assets/icon-scissors-f778df73.svg" alt="Scissors icon">
         <p class="game__text">you picked</p>
       </div>
       <div class="game__rock game__icon" data-id="2">
+        <img src="/assets/icon-rock-e16feca1.svg" alt="Rock icon">
         <p class="game__text">you picked</p>
       </div>
       <div class="game__icon game__house game__house-position">
-        <p class="game__house--text game__text">the house picked</p>
+        <img src="" class="game__house-photo">
+        <p class="game__text">the house picked</p>
       </div>
-      <div class="game__background"><svg width="313" height="278" xmlns="http://www.w3.org/2000/svg">
-          <path stroke="#000" stroke-width="15" fill="none" opacity=".2" d="M156.5 262 300 8H13z" />
-        </svg></div>
+      <div class="game__background">
+        <img src="/assets/bg-triangle-af338703.svg" alt="Background">
+      </div>
       <div class="result">
         <div class="result__text"></div>
         <button class="result__play-again-btn">play again</button>
@@ -128,6 +133,11 @@
           d="M16.97 0l2.122 2.121-7.425 7.425 7.425 7.425-2.121 2.12-7.425-7.424-7.425 7.425L0 16.97l7.425-7.425L0 2.121 2.121 0l7.425 7.425L16.971 0z"
           opacity=".25" />
       </svg></button>
+  </div>
+
+  <div class="landscape-alert">
+    <i class="ti ti-device-mobile"></i>
+    <p class="landscape-alert__text">please use portrait mode!</p>
   </div>
 
 

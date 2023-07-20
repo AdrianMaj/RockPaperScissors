@@ -1,87 +1,90 @@
 @use './variables' as *;
 @media (min-width: 768px) {
-	$icon-size: 220px;
-    $shadow-size: 10px;
+	$icon-size: 11em;
+	$border-width: 16px;
+	$shadow-width: 8px;
 	.score {
-		margin: 2em;
-		padding: 1em;
-		border-width: 6px;
-        border-radius: 8px;
 		&__title {
-			font-size: 4rem;
-			line-height: 3.6rem;
+			font-size: 3rem;
+			line-height: 2.5rem;
 		}
 		&__box {
-			width: 150px;
-			border-radius: 6px;
+			padding: 0.8em 2.4em;
 		}
 		&__text {
-			font-size: 2rem;
+			font-size: 1.6rem;
 		}
 		&__value {
-			font-size: 7rem;
+			font-size: 6rem;
+			line-height: 5rem;
 		}
 	}
 	.game {
 		&__icon {
-			margin: 1em 2em;
 			width: $icon-size;
 			height: $icon-size;
-			border-width: 24px;
-			box-shadow: inset 0px $shadow-size 0px rgba(155, 151, 151, 0.5);
-            &::after {
-				width: $icon-size;
-				height: $icon-size;
+			box-shadow: inset 0px $shadow-width 0px rgba(155, 151, 151, 0.5);
+			border-width: $border-width;
+			img {
+				width: 65px;
+				height: 65px;
+			}
+			&::after {
+				border-width: $border-width;
 			}
 		}
-        &__paper {
-            &::after {
-                box-shadow: 0px $shadow-size 0px $paper-shadow;
-            }
-        }
-        &__scissors {
-            &::after {
-                box-shadow: 0px $shadow-size 0px $scissors-shadow;
-            }
-        }
-        &__rock {
-            &::after {
-                box-shadow: 0px $shadow-size 0px $rock-shadow;
-            }
-        }
-        &__house{
-            box-shadow: none;
-        }
+		&__paper {
+			&::after {
+				box-shadow: 0px $shadow-width 0px $paper-shadow;
+			}
+		}
+		&__scissors {
+			&::after {
+				box-shadow: 0px $shadow-width 0px $scissors-shadow;
+			}
+		}
+		&__rock {
+			&::after {
+				box-shadow: 0px $shadow-width 0px $rock-shadow;
+			}
+		}
+		&__house {
+			box-shadow: none;
+		}
+		&__text {
+			font-size: 2rem;
+		}
 		&__background {
-			svg {
+			img {
 				scale: 1;
 			}
 		}
+	}
+	.result {
 		&__text {
-			font-size: 2.4rem;
+			font-size: 6rem;
+		}
+		&__play-again-btn {
+			font-size: 2rem;
 		}
 	}
 
-	.result {
-		&__text {
-			font-size: 9rem;
-		}
-		&__play-again-btn {
-			font-size: 2.8rem;
-		}
-	}
 	.rules-btn {
-		font-size: 2.5rem;
+		font-size: 2rem;
 	}
 	.rules-modal {
+		&__title {
+			font-size: 4.5rem;
+		}
 		&__image {
 			scale: 1.5;
 		}
 		&__close-btn {
 			scale: 1.5;
 		}
-		&__title {
-			font-size: 6rem;
-		}
+	}
+	.circle-effect {
+		width: 20em;
+		height: 20em;
 	}
 }

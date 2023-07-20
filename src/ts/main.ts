@@ -12,6 +12,7 @@ const gameHouse: HTMLElement = document.querySelector('.game__house')!
 let selectedIcon: HTMLElement
 const gameIcons = document.querySelectorAll('.game__icon')
 const gameContainer: HTMLElement = document.querySelector('.game__container')!
+const housePhoto: HTMLElement = document.querySelector('.game__house-photo')!
 //RESULT
 const resultBox: HTMLElement = document.querySelector('.result')!
 const resultBtn: HTMLElement = document.querySelector('.result__play-again-btn')!
@@ -52,8 +53,8 @@ const handleGame = (e: Event) => {
 					const textElement = text as HTMLElement
 					textElement.style.display = 'block'
 					gameHouse.style.display = 'flex'
-					gameSection.style.gridTemplateColumns = 'repeat(4,1fr)'
-					gameSection.style.gridTemplateRows = '1fr 2fr'
+					gameSection.style.gridTemplateColumns = '1fr 2fr 2fr 1fr'
+					gameSection.style.gridTemplateRows = '1fr 1.2fr'
 				}
 			})
 		}
@@ -61,8 +62,22 @@ const handleGame = (e: Event) => {
 	setTimeout(() => {
 		gameHouse.classList.remove('game__house')
 		gameHouse.classList.add(randomHouse())
+		if (gameHouse.classList.contains('game__paper')) {
+			housePhoto.style.display = 'block'
+			housePhoto.setAttribute('src', './src/img/icon-paper.svg')
+		} else if (gameHouse.classList.contains('game__scissors')) {
+			housePhoto.style.display = 'block'
+			housePhoto.setAttribute('src', './src/img/icon-scissors.svg')
+		} else if (gameHouse.classList.contains('game__rock')) {
+			housePhoto.style.display = 'block'
+			housePhoto.setAttribute('src', './src/img/icon-rock.svg')
+		}
 		const playerNumber: number = Number(selectedIcon.getAttribute('data-id'))
 		resultBox.classList.add('visible')
+		gameSection.style.gap = '15em'
+		// gameSection.style.gridTemplateColumns = '1fr 2fr 2fr 2fr 1fr'
+		// const houseIcon: HTMLElement = document.querySelector('.game__house-position')!
+		// houseIcon.style.gridColumn = '4/5'
 		if (
 			(houseNumber == 0 && playerNumber == 0) ||
 			(houseNumber == 1 && playerNumber == 1) ||

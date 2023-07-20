@@ -1,17 +1,51 @@
 @media (min-width: 576px) {
-	$icon-size: 130px;
-	.game {
-		&__icon {
-			width: $icon-size;
-			height: $icon-size;
-            &::after{
-                width: $icon-size;
-                height: $icon-size;
-            }
-		}
-        &__house{
+    $icon-size: 9em;
+    .score{
+        &__title{
+            font-size: 2.4rem;
+            line-height: 2rem;
+        }
+        &__text{
+            font-size: 1.2rem;
+        }
+        &__value{
+            font-size: 4.8rem;
+        }
+    }
+    .game{
+        &__icon{
             width: $icon-size;
             height: $icon-size;
+            img{
+                width: 55px;
+                height: 55px;
+            }
         }
-	}
+        &__text{
+            font-size: 1.4rem;
+        }
+    }
+    .result{
+        &__text{
+            font-size: 5rem;
+        }
+        &__play-again-btn {
+            font-size: 1.6rem;
+        }
+    }
+    
+    .rules-btn{
+        font-size: 1.6rem;
+    }
+    .rules-modal{
+        &__title{
+            font-size: 3.5rem;
+        }
+        &__image{
+            scale: 1.1;
+        }
+        &__close-btn{
+            scale: 1.2;
+        }
+    }
 }
