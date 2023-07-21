@@ -65,13 +65,13 @@ const handleGame = (e: Event) => {
 		gameHouse.classList.add(randomHouse())
 		if (gameHouse.classList.contains('game__paper')) {
 			housePhoto.style.display = 'block'
-			housePhoto.setAttribute('src', './src/img/icon-paper.svg')
+			housePhoto.setAttribute('src', '/RockPaperScissors/dist/assets/icon-paper-90d57903.svg')
 		} else if (gameHouse.classList.contains('game__scissors')) {
 			housePhoto.style.display = 'block'
-			housePhoto.setAttribute('src', './src/img/icon-scissors.svg')
+			housePhoto.setAttribute('src', '/RockPaperScissors/dist/assets/icon-scissors-f778df73.svg')
 		} else if (gameHouse.classList.contains('game__rock')) {
 			housePhoto.style.display = 'block'
-			housePhoto.setAttribute('src', './src/img/icon-rock.svg')
+			housePhoto.setAttribute('src', '/RockPaperScissors/dist/assets/icon-rock-e16feca1.svg')
 		}
 		const playerNumber: number = Number(selectedIcon.getAttribute('data-id'))
 		resultBox.classList.add('visible')
