@@ -41,6 +41,7 @@ const handleGame = (e: Event) => {
 	selectedIcon = e.target as any
 	selectedIcon.classList.add('selected')
 	selectedIcon.removeEventListener('click', handleGame)
+	gameHouse.removeEventListener('click', handleGame)
 	selectedIcon.style.margin = '0 auto'
 	gameHouse.style.margin = '0 auto'
 	gameIcons.forEach(icon => {
