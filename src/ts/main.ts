@@ -75,7 +75,7 @@ const handleGame = (e: Event) => {
 		}
 		const playerNumber: number = Number(selectedIcon.getAttribute('data-id'))
 		resultBox.classList.add('visible')
-		gameSection.style.gap = '15em'
+		gameSection.classList.add('gap')
 		// gameSection.style.gridTemplateColumns = '1fr 2fr 2fr 2fr 1fr'
 		// const houseIcon: HTMLElement = document.querySelector('.game__house-position')!
 		// houseIcon.style.gridColumn = '4/5'
