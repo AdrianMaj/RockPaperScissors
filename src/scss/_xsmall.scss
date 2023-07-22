@@ -296,7 +296,7 @@ body {
 .visible {
 	display: flex;
 }
-@media (max-height: 548px) {
+@media (max-height: 768px) {
 	.landscape-alert {
 		position: absolute;
 		display: flex;
@@ -309,6 +309,7 @@ body {
 		height: 100%;
 		background-color: rgba(0, 0, 0, 0.87);
 		z-index: 10001;
+		overflow: hidden;
 		.ti {
 			font-size: 25rem;
 			color: $text-color;
