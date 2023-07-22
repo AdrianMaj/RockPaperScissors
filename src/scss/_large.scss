@@ -1,93 +1,95 @@
 @use './variables' as *;
-@media (min-width: 992px) {
-		$icon-size: 15em;
-		$border-width: 24px;
-		$shadow-width: 12px;
-		.score {
-			&__title {
-				font-size: 5rem;
-				line-height: 4.2rem;
-			}
-			&__box {
-				padding: 1.2em 2.8em;
-			}
-			&__text {
-				font-size: 2rem;
-			}
-			&__value {
-				font-size: 8rem;
-				line-height: 7rem;
-			}
+@media (min-width: 992px) and (min-height: 895px) {
+	$icon-size: 15em;
+	$border-width: 24px;
+	$shadow-width: 12px;
+	.score {
+		&__title {
+			font-size: 5rem;
+			line-height: 4.2rem;
 		}
-		.game {
-			&__icon {
-				width: $icon-size;
-				height: $icon-size;
-				box-shadow: inset 0px $shadow-width 0px rgba(155, 151, 151, 0.5);
+		&__box {
+			padding: 1.2em 2.8em;
+		}
+		&__text {
+			font-size: 2rem;
+		}
+		&__value {
+			font-size: 8rem;
+			line-height: 7rem;
+		}
+	}
+	.game {
+		&__icon {
+			width: $icon-size;
+			height: $icon-size;
+			box-shadow: inset 0px $shadow-width 0px rgba(155, 151, 151, 0.5);
+			border-width: $border-width;
+			img {
+				width: 80px;
+				height: 80px;
+			}
+			&::after {
 				border-width: $border-width;
-				img {
-					width: 80px;
-					height: 80px;
-				}
-				&::after {
-					border-width: $border-width;
-				}
-			}
-			&__paper {
-				&::after {
-					box-shadow: 0px $shadow-width 0px $paper-shadow;
-				}
-			}
-			&__scissors {
-				&::after {
-					box-shadow: 0px $shadow-width 0px $scissors-shadow;
-				}
-			}
-			&__rock {
-				&::after {
-					box-shadow: 0px $shadow-width 0px $rock-shadow;
-				}
-			}
-			&__house {
-				box-shadow: none;
-			}
-			&__text {
-				font-size: 2.6rem;
-			}
-			&__background {
-				img {
-					scale: 1.4;
-				}
 			}
 		}
-		.result {
-			&__text {
-				font-size: 8rem;
-			}
-			&__play-again-btn {
-				border-radius: 10px;
-				font-size: 3rem;
+		&__paper {
+			&::after {
+				box-shadow: 0px $shadow-width 0px $paper-shadow;
 			}
 		}
-	
-		.rules-btn {
-			font-size: 3rem;
+		&__scissors {
+			&::after {
+				box-shadow: 0px $shadow-width 0px $scissors-shadow;
+			}
+		}
+		&__rock {
+			&::after {
+				box-shadow: 0px $shadow-width 0px $rock-shadow;
+			}
+		}
+		&__house {
+			box-shadow: none;
+		}
+		&__text {
+			font-size: 2.6rem;
+		}
+		&__background {
+			img {
+				scale: 1.4;
+			}
+		}
+	}
+	.result {
+		&__text {
+			font-size: 8rem;
+		}
+		&__play-again-btn {
 			border-radius: 10px;
+			font-size: 3rem;
 		}
-		.rules-modal {
-			&__title {
-				font-size: 6rem;
-			}
-			&__image {
-				scale: 2.2;
-			}
-			&__close-btn {
-				scale: 2.2;
-			}
+	}
+
+	.rules-btn {
+		font-size: 3rem;
+		border-radius: 10px;
+	}
+	.rules-modal {
+		&__title {
+			font-size: 6rem;
 		}
-	
+		&__image {
+			scale: 2.2;
+		}
+		&__close-btn {
+			scale: 2.2;
+		}
+	}
+
 	.circle-effect {
 		width: 30em;
 		height: 30em;
 	}
+	@media (max-height: 768px) {
 	}
+}

@@ -1,5 +1,5 @@
 @use './variables' as *;
-@media (min-width: 768px) {
+@media (min-width: 768px) and (min-height: 732px){
 	$icon-size: 11em;
 	$border-width: 16px;
 	$shadow-width: 8px;
